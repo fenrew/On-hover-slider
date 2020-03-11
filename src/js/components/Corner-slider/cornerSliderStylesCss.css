@@ -1,0 +1,18 @@
+#cornerSliderClipping {
+    clip-path: polygon(0 0, 0% 100%, 100% 100%, 0% 0%);
+    transition: 2s ease;
+    width: fit-content;
+    min-width: 10%;
+    height: fit-content;
+    min-height: 10%;
+    padding: 3% 3% 1% 1%;
+    position: absolute;
+    bottom: 0%;
+    background-color: orange
+}
+
+#cornerSliderClipping:hover{
+    /* min-width: 300px;
+    min-height: 300px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%); */
+}
