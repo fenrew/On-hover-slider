@@ -4,15 +4,9 @@ export default {
         height: "100%",
         position: "relative",
     },
-    smallSlider: {
-        width: "fit-content",
-        minWidth: "100px",
-        height: "fit-content",
-        minHeight: "100px",
-        padding: "3% 3% 1% 1%",
-        position: "absolute",
-        bottom: "0%",
-        backgroundColor: "orange"
+    smallSliderContainer: {
+       display: "flex",
+       alignItems: "flex-end"
     },
     largeSlider: {
         width: "fit-content",

@@ -1,9 +1,14 @@
 import React from 'react';
 
+import styles from "./cornerSliderStyles";
+
+
 const CornerSliderSmall = (props) => {
     return (
-        <div>
+        <div id="cornerSliderSmallContainer" style={styles.container}>
+            <div style={styles.smallSliderContainer}>
             {props.children}
+            </div>
         </div>
     );
 };
