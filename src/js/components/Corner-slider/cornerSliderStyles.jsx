@@ -4,10 +4,6 @@ export default {
         height: "100%",
         position: "relative",
     },
-    smallSliderContainer: {
-       display: "flex",
-       alignItems: "flex-end"
-    },
     largeSlider: {
         width: "fit-content",
         minWidth: "300px",

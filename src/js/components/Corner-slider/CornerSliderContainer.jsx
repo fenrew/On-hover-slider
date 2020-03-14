@@ -3,6 +3,9 @@ import styles from "./cornerSliderStyles";
 import "./cornerSliderStylesCss.css";
 
 const CornerSliderContainer = props => {
+
+  console.log("CHILDREN", props.children)
+
   const [sliderClick, setSliderClick] = useState({
     displaySmallSlider: true,
     smallSliderSize: { width: 0, height: 0, top: 0, left: 0 },
@@ -10,7 +13,7 @@ const CornerSliderContainer = props => {
     mouseOutside: true,
     cssProperties: {
       minWidth: "10%",
-      minHeight: "10%",
+      minHeight: "6vw",
       clipPath: "polygon(0 0, 0% 100%, 100% 100%, 0% 0%)"
     },
     containerRef: React.createRef(),
@@ -47,12 +50,12 @@ const CornerSliderContainer = props => {
     }
   };
 
-  const handleOnSliderClick = mouseOutside => {
+  const handleOnSliderClick = mouseOutsideArg => {
     if (!sliderClick.largeSliderRef.current) return;
 
     let cssProperties = {
       minWidth: "30%",
-      minHeight: "30%",
+      minHeight: "20vw",
       clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)"
     };
 
@@ -70,7 +73,7 @@ const CornerSliderContainer = props => {
     if (!sliderClick.displaySmallSlider) {
       cssProperties = {
         minWidth: "10%",
-        minHeight: "10%",
+        minHeight: "6vw",
         clipPath: "polygon(0 0, 0% 100%, 100% 100%, 0% 0%)"
       };
     }
@@ -88,7 +91,7 @@ const CornerSliderContainer = props => {
         top: offsetTop,
         left: offsetLeft
       },
-      mouseOutside: mouseOutside ? true : false
+      mouseOutside: mouseOutsideArg //? true : false
     });
   };
 
@@ -157,7 +160,7 @@ const CornerSliderContainer = props => {
         onMouseEnter={() =>
           transitionCompleted.completed ? handleOnSliderClick() : ""
         }
-        onMouseLeave={event =>
+        onMouseLeave={() =>
           transitionCompleted.completed ? handleOnSliderClick() : ""
         }
       >
