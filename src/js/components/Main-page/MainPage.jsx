@@ -9,9 +9,17 @@ const MainPage = () => {
       <div id="body-container">
         <CornerSliderContainer>
           <CornerSliderLarge>
-            <div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
-                <h1>Markus</h1>
-              <p style={{fontStyle: "italic"}}>- Born 20th July 1992</p>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+            >
+              <h1>Markus</h1>
+              <p style={{ fontStyle: "italic" }}>
+                - Born 20th July 1992, infected by Corona 7th of Mars, 2020
+              </p>
             </div>
           </CornerSliderLarge>
           <CornerSliderSmall>
@@ -21,7 +29,7 @@ const MainPage = () => {
                 alignItems: "center",
                 justifyContent: "center",
                 width: "100%",
-                height: "100%"
+                height: "100%",
               }}
             >
               <div
